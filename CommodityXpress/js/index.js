@@ -1,6 +1,7 @@
 $(document).ready(function() {
-
-    $('#secondarynav').hide();
+	$('#secondarynav').hide();
+$('#orderId').click();
+    
 });
 
 
@@ -9,3 +10,4 @@ function bookops() {
     $('#secondarynav').toggle('show');
 }
 
+$('#orderId').click();
