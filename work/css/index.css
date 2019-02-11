@@ -1,0 +1,125 @@
+.nav {
+    text-align: center;
+}
+
+#mainnav {
+    background-color: #23903c;
+    width: 7%;
+    position: fixed;
+    height: 100%;
+    color: white;
+
+}
+
+#mainnav a {
+    color: white;
+   }
+
+
+
+
+#secondarynav {
+    background-color: #e9ecef;
+    width: 10%;
+    position: fixed;
+    height: 100%;
+    left: 7%;
+
+}
+
+#secondarynav a{
+	color: #006400;
+}
+
+#secondarynav strong{
+	color: #000000;
+}
+
+#proficpic {}
+
+#mainContent {
+
+    padding-top: 10%;
+    padding-left: 10%;
+
+}
+
+.container {
+    left: 17%;
+}
+
+input {
+    margin-top: 10px;
+
+
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1;
+    /* Firefox */
+    font-weight: bold;
+    padding-left: 10%;
+}
+
+#decsId{
+	background-color: #23903c;
+	color: #ffffff;
+	font-weight: bolder;
+	font-size: 25px;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px; 
+	text-align: center;
+	vertical-align: middle;
+	padding: 2px;
+}
+
+.loads{
+	background-color: #f3f3f3;
+	margin-top: 30px;
+	border-radius: 10%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.progressbar {
+border-left: 2px solid #000;
+    height: 76%;
+    margin-left: 6px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.progressbarbefore {
+  content: " ";
+  height: 15px;
+  width: 15px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+.progressbarafter {
+  content: " ";
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+
+.bookdt1{
+	font-size: 0.75em;
+	font-weight: 600;
+
+}
+
+.bookdt2{
+	font-size: 0.60em;
+	font-weight: 600;
+	
+}

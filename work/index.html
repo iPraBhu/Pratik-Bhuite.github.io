@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Commodity Xpress</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <nav class="nav flex-column" id="mainnav">
+        <span class="nav-link" style=""><img src="images/profile1.jpg" class="rounded-circle" width="80%" height="80%"></span>
+        <span style="padding-top: 100px;"></span>
+        <a class="nav-link" href="#!"><i class="far fa-chart-bar fa-2x"></i></a>
+        <a class="nav-link" href="#!"><i class="fas fa-people-carry fa-2x"></i></a>
+        <a class="nav-link active" href="#!" onclick="bookops()"><i class="fas fa-truck-moving fa-2x"></i></a>
+        <a class="nav-link" href="#!"><i class="far fa-snowflake fa-2x"></i></a>
+        <a class="nav-link" href="#!"><i class="fas fa-shopping-cart fa-2x"></i></a>
+    </nav>
+    <nav class="nav flex-column" id="secondarynav">
+        <a class="nav-link" href="#!" style="padding-top: 100px"><i class="fas fa-home fa-2x"></i><br><strong>HOME</strong></a>
+        <a class="nav-link active" href="#!"><i class="fas fa-certificate fa-2x"></i><br><strong>ACTIVE</strong></a>
+        <a class="nav-link" href="#!"><i class="fas fa-history fa-2x"></i><br><strong>HISTORY</strong></a>
+    </nav>
+    <div class="container">
+        <div class="row" id="mainContent">
+            <div class="col-1"></div>
+            <div class="col-6">
+                <div class="jumbotron">
+                    <div class="d-flex flex-column">
+                        <form class="justify-content-center">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="originId" placeholder="Origin">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="destinationId" placeholder="Destination">
+                            </div>
+                            <div class="form-group">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="commType" placeholder="Select Commodity Type">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col"><input type="text" class="form-control" id="dateID" placeholder="Date">
+                                    </div>
+                                    <div class="col"> <input type="text" class="form-control" id="weightId" placeholder="Weight">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="tripType" placeholder="Select Trip Type">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col"><input type="text" class="form-control" id="rateID" placeholder="Rate">
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-lg btn-success" id="bookNowId" style="width: 100%;">BOOK NOW</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="jumbotron" style="padding-top: 10px;">
+                    <span id="decsId">+</span> <strong>RECENT LOADS</strong>
+                    <div id="loadsId">
+                        <div class="row loads">
+                            <div class="col-1">
+                                <span class="progressbarbefore"></span>
+                                <div class="progressbar"></div>
+                                <span class="progressbarafter"></span>
+                            </div>
+                            <div class="col-4">
+                                <span class="bookdt1">Vidhisha,MP</span><br>
+                                <span class="bookdt2">12-Jan-2019</span><br>
+                                <br>
+                                <span class="bookdt1">Sonipat,HR</span>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                            <div class="col-4" style="text-align: right;">
+                                <span class="bookdt2">Open-10tyre</span><br>
+                                <span class="bookdt1">16MT | Wheat</span><br>
+                                <span class="bookdt2">Rs. 23,000</span><br>
+                                <button type="button" class="btn btn-sm btn-success">Book Now</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row loads">
+                            <div class="col-1">
+                                <span class="progressbarbefore"></span>
+                                <div class="progressbar"></div>
+                                <span class="progressbarafter"></span>
+                            </div>
+                            <div class="col-4">
+                                <span class="bookdt1">Vidhisha,MP</span><br>
+                                <span class="bookdt2">12-Jan-2019</span><br>
+                                <br>
+                                <span class="bookdt1">Sonipat,HR</span>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                            <div class="col-4" style="text-align: right;">
+                                <span class="bookdt2">Open-10tyre</span><br>
+                                <span class="bookdt1">16MT | Wheat</span><br>
+                                <span class="bookdt2">Rs. 23,000</span><br>
+                                <button type="button" class="btn btn-sm btn-success">Book Now</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row loads">
+                            <div class="col-1">
+                                <span class="progressbarbefore"></span>
+                                <div class="progressbar"></div>
+                                <span class="progressbarafter"></span>
+                            </div>
+                            <div class="col-4">
+                                <span class="bookdt1">Vidhisha,MP</span><br>
+                                <span class="bookdt2">12-Jan-2019</span><br>
+                                <br>
+                                <span class="bookdt1">Sonipat,HR</span>
+                            </div>
+                            <div class="col-3">
+                            </div>
+                            <div class="col-4" style="text-align: right;">
+                                <span class="bookdt2">Open-10tyre</span><br>
+                                <span class="bookdt1">16MT | Wheat</span><br>
+                                <span class="bookdt2">Rs. 23,000</span><br>
+                                <button type="button" class="btn btn-sm btn-success">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
