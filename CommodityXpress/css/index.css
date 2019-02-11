@@ -3,7 +3,7 @@
 }
 
 #mainnav {
-    background-color: #23903c;
+    background-color: #219652;
     width: 7%;
     position: fixed;
     height: 100%;
@@ -11,10 +11,23 @@
 
 }
 
+
 #mainnav a {
     color: white;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    opacity: 1;
+backface-visibility: hidden;
    }
 
+/*#mainnav a:hover, #mainnav a:focus {
+background: #e0ffe0;
+opacity: 0.2;
+   }*/
+
+.btn-success{
+  background-color: #219652;
+}
 
 
 
@@ -24,11 +37,25 @@
     position: fixed;
     height: 100%;
     left: 7%;
-
+    vertical-align: middle;
 }
 
 #secondarynav a{
 	color: #006400;
+  vertical-align: middle;
+}
+
+#secondarynav a:hover{
+  color: gray;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+
+
+
+#secNavLinks{
+  padding-top: 160%;
 }
 
 #secondarynav strong{
@@ -122,4 +149,17 @@ border-left: 2px solid #000;
 	font-size: 0.60em;
 	font-weight: 600;
 	
+}
+
+#commTypesId img{
+  width: 60%;
+  height:100%;
+  padding-left: 1%;
+}
+
+#commTypesId div.col{
+  border-radius: 10%;
+  padding: 2%;
+  background-color: #ffffff;
+  text-align: center;
 }
