@@ -75,11 +75,6 @@ opacity: 0.2;
     left: 17%;
 }
 
-input {
-    margin-top: 10px;
-
-
-}
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -94,21 +89,21 @@ input {
 	background-color: #23903c;
 	color: #ffffff;
 	font-weight: bolder;
-	font-size: 25px;
+	font-size: 1.5rem;
 	border-radius: 50%;
-	width: 25px;
-	height: 25px; 
+/*	width: 25px;
+	height: 25px; */
 	text-align: center;
 	vertical-align: middle;
-	padding: 2px;
+	padding: 1%;
 }
 
 .loads{
 	background-color: #f3f3f3;
-	margin-top: 30px;
+	margin-top: 6%;
 	border-radius: 10%;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 1%;
+	padding-bottom: 2%;
 }
 
 .progressbar {
