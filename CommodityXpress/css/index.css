@@ -17,18 +17,21 @@
     padding-top: 20%;
     padding-bottom: 20%;
     opacity: 1;
-backface-visibility: hidden;
+    z-index: 2;
    }
 
-/*#mainnav a:hover, #mainnav a:focus {
-background: #e0ffe0;
+#mainnav a:hover, #mainnav a:focus {
+background: #ffffff;
 opacity: 0.2;
-   }*/
+   }
 
 .btn-success{
   background-color: #219652;
 }
 
+.fas{
+  z-index: 10;
+}
 
 
 #secondarynav {

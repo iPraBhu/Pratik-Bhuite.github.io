@@ -6,7 +6,7 @@ $('#orderId').click();
 
 
 function bookops() {
-    console.log('hello1')
+    
     $('#secondarynav').toggle('show');
 }
 
