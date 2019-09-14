@@ -4,6 +4,7 @@
 $(document).ready(function() {
   AOS.init( {
     // uncomment below for on-scroll animations to played only once
+    startEvent: 'load'
     // once: true  
   }); // initialize animate on scroll library
 });
