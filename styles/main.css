@@ -6976,7 +6976,7 @@ Created using IcoMoon - icomoon.io
 .gallery figure.cc-effect p,
 .gallery figure.cc-effect button {
   padding: 0.5em 2em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: 1px;
   -webkit-transition: -webkit-transform 0.35s;
   transition: -webkit-transform 0.35s;
