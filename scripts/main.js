@@ -41,23 +41,29 @@ $(document).ready(function() {
   const aiTooltip = $('#aiTooltip');
   const aiBotMessage = $('#aiBotMessage');
   
-  const pratikFacts = [
-    "🚀 Pratik has 10+ years of full-stack development experience!",
-    "☕ He's a Java expert who loves Spring Boot and microservices!",
-    "⚛️ React.js wizard who creates amazing user interfaces!",
-    "☁️ Cloud enthusiast working with AWS, Azure, and GCP!",
-    "🔧 DevOps ninja with Docker, Kubernetes, and CI/CD expertise!",
-    "� Database guru skilled in MySQL, PostgreSQL, and MongoDB!",
-    "🔒 Security-conscious developer implementing best practices!",
-    "� Problem solver who loves tackling complex challenges!",
-    "📱 Mobile development experience with React Native!",
-    "🤖 AI/ML enthusiast exploring modern technologies!",
-    "� Big data experience with Apache Kafka and Elasticsearch!",
-    "🌐 RESTful API architect and GraphQL implementer!",
-    "⚡ Performance optimization specialist for scalable systems!",
-    "👥 Team leader who mentors junior developers!",
-    "🎓 Continuous learner staying updated with latest tech trends!"
-  ];
+const pratikFacts = [
+  "🚀 Pratik has 10+ years of full-stack engineering and leadership experience!",
+  "🏗️ He's currently the Director of Engineering at QuinStreet, leading scalable software initiatives!",
+  "🤖 Passionate about AI/ML — he’s deployed Python-based XGBoost models for predictive analytics and automation!",
+  "⚙️ Expert in Java, Spring Boot, and RESTful APIs, with a strong focus on performance and scalability!",
+  "🧩 Experienced in building secure systems using JWT, OAuth2, OpenID Connect, and Keycloak!",
+  "💡 Integrates AI tools like OpenAI Codex, GitHub Copilot, and Vibe coding into development workflows!",
+  "🚦 Implements agile methodologies — from sprint planning to retrospectives — to deliver on time and with quality!",
+  "🧠 Loves exploring AI-assisted coding to make teams code smarter, faster, and more creatively!",
+  "👥 Known for building and mentoring high-performing engineering teams!",
+  "🌍 Managed global teams across India and the U.S. while delivering enterprise-grade solutions!",
+  "📊 Designed the architecture for QuinStreet’s 360Finance product from scratch!",
+  "📞 Built omnichannel communication platforms integrating Voice, SMS, WebChat, and WhatsApp!",
+  "🧱 Migrated legacy C++ systems to modern Java 8 + Spring architectures!",
+  "🧪 Implemented CI/CD pipelines using Jenkins, Maven, and SonarQube for faster, safer releases!",
+  "🧭 Led recruitment drives for Java and QA engineers, helping scale engineering operations!",
+  "💬 Writes about tech and leadership on his blog — www.adevguide.com!",
+  "🧰 Portfolio showcases his projects at pratik-bhuite.github.io!",
+  "🎓 Holds a degree in Electronics and Telecommunication from DYPIET!",
+  "🗣️ Fluent in English, Hindi, and Marathi — a true multicultural communicator!",
+  "🔥 Passionate about fostering curiosity, continuous learning, and innovation-driven culture!"
+];
+
   
   let currentFactIndex = 0;
   let aiBotMessageTimeout;
