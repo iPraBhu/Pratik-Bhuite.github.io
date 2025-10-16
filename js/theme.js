@@ -10,15 +10,19 @@
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         
-        // Update toggle button icon
+        // Update toggle button icons
         const toggleBtn = document.querySelector('.theme-toggle');
         if (toggleBtn) {
-            const icon = toggleBtn.querySelector('i');
-            if (icon) {
+            const sunIcon = toggleBtn.querySelector('.fa-sun-o');
+            const moonIcon = toggleBtn.querySelector('.fa-moon-o');
+            
+            if (sunIcon && moonIcon) {
                 if (theme === 'dark') {
-                    icon.className = 'fa fa-sun-o';
+                    sunIcon.style.display = 'inline-block';
+                    moonIcon.style.display = 'none';
                 } else {
-                    icon.className = 'fa fa-moon-o';
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'inline-block';
                 }
             }
         }

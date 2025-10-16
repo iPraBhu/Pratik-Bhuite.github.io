@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -30,10 +30,11 @@
 
 </head>
 
-<body id="top" data-theme="dark">
+<body id="top">
     <!-- Theme Toggle Button -->
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
         <i class="fa fa-sun-o"></i>
+        <i class="fa fa-moon-o" style="display: none;"></i>
     </button>
     <header>
         <div class="profile-page sidebar-collapse">
@@ -422,20 +423,18 @@
                     </div>
                     
                     <div class="portfolio-tabs">
-                        <ul class="nav nav-pills justify-content-center portfolio-nav" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active portfolio-tab" data-toggle="tab" href="#web-development" role="tablist">
+                        <div class="portfolio-nav-wrapper">
+                            <div class="portfolio-nav-container">
+                                <button class="portfolio-tab-btn active" data-target="web-development">
                                     <i class="fa fa-laptop"></i>
                                     <span>Web Applications</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link portfolio-tab" data-toggle="tab" href="#blog" role="tablist">
+                                </button>
+                                <button class="portfolio-tab-btn" data-target="blog">
                                     <i class="fa fa-pencil"></i>
                                     <span>Technical Blog</span>
-                                </a>
-                            </li>
-                        </ul>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="tab-content portfolio-content">
@@ -845,59 +844,17 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="container mt-5">
+                            <div class="text-center">
+                                <p>&copy; 2025 Built with <i class="fa fa-heart" style="color: red;"></i> by Pratik Bhuite</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
         </div>
-        <footer class="modern-footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3 class="footer-name">Pratik Bhuite</h3>
-                        <p class="footer-tagline">Senior Full Stack Developer</p>
-                        <p class="footer-description">Building exceptional digital experiences with modern technologies</p>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4 class="footer-title">Quick Links</h4>
-                        <ul class="footer-links">
-                            <li><a href="#about" class="smooth-scroll">About</a></li>
-                            <li><a href="#skill" class="smooth-scroll">Skills</a></li>
-                            <li><a href="#portfolio" class="smooth-scroll">Portfolio</a></li>
-                            <li><a href="#experience" class="smooth-scroll">Experience</a></li>
-                            <li><a href="#contact" class="smooth-scroll">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-section">
-                        <h4 class="footer-title">Connect</h4>
-                        <div class="footer-social">
-                            <a href="https://www.linkedin.com/in/pratikbhuite/" target="_blank" class="footer-social-link linkedin">
-                                <i class="fa fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="https://github.com/iPraBhu/ADevGuide" target="_blank" class="footer-social-link github">
-                                <i class="fa fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://www.adevguide.com" target="_blank" class="footer-social-link website">
-                                <i class="fa fa-globe"></i>
-                                <span>Blog</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer-bottom">
-                    <div class="footer-copyright">
-                        <p>&copy; 2024 Pratik Bhuite. All rights reserved.</p>
-                    </div>
-                    <div class="footer-built">
-                        <p>Built with <i class="fa fa-heart"></i> using modern web technologies</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
         <script src="js/core/jquery.3.2.1.min.js"></script>
         <script src="js/core/popper.min.js"></script>
         <script src="js/core/bootstrap.min.js"></script>
@@ -914,46 +871,6 @@
                     once: true,
                     offset: 100
                 });
-                
-                // Dark mode toggle functionality
-                const themeToggle = document.getElementById('themeToggle');
-                const body = document.body;
-                const sunIcon = themeToggle.querySelector('.fa-sun');
-                const moonIcon = themeToggle.querySelector('.fa-moon');
-                
-                // Set default theme to dark
-                body.setAttribute('data-theme', 'dark');
-                sunIcon.style.display = 'inline-block';
-                moonIcon.style.display = 'none';
-                
-                themeToggle.addEventListener('click', function() {
-                    const currentTheme = body.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    
-                    body.setAttribute('data-theme', newTheme);
-                    
-                    if (newTheme === 'dark') {
-                        sunIcon.style.display = 'inline-block';
-                        moonIcon.style.display = 'none';
-                    } else {
-                        sunIcon.style.display = 'none';
-                        moonIcon.style.display = 'inline-block';
-                    }
-                    
-                    // Save theme preference
-                    localStorage.setItem('theme', newTheme);
-                });
-                
-                // Load saved theme preference
-                const savedTheme = localStorage.getItem('theme') || 'dark';
-                body.setAttribute('data-theme', savedTheme);
-                if (savedTheme === 'dark') {
-                    sunIcon.style.display = 'inline-block';
-                    moonIcon.style.display = 'none';
-                } else {
-                    sunIcon.style.display = 'none';
-                    moonIcon.style.display = 'inline-block';
-                }
                 
                 // Navbar background change on scroll
                 $(window).scroll(function() {
