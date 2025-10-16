@@ -7,6 +7,19 @@ $(document).ready(function() {
     startEvent: 'load'
     // once: true  
   }); // initialize animate on scroll library
+  
+  // Portfolio tab functionality
+  $('.portfolio-tab-btn').click(function() {
+    var target = $(this).data('target');
+    
+    // Remove active class from all tabs and content
+    $('.portfolio-tab-btn').removeClass('active');
+    $('.tab-pane').removeClass('active');
+    
+    // Add active class to clicked tab and corresponding content
+    $(this).addClass('active');
+    $('#' + target).addClass('active');
+  });
 });
 
 // Smooth scroll for links with hashes
