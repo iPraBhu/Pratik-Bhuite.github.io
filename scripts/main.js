@@ -20,6 +20,20 @@ $(document).ready(function() {
     $(this).addClass('active');
     $('#' + target).addClass('active');
   });
+  
+  // Back to top button functionality
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+      $('.back-to-top').addClass('visible');
+    } else {
+      $('.back-to-top').removeClass('visible');
+    }
+  });
+  
+  $('.back-to-top').click(function() {
+    $('html, body').animate({scrollTop: 0}, 600);
+    return false;
+  });
 });
 
 // Smooth scroll for links with hashes

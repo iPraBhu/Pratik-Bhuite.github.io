@@ -10,8 +10,8 @@
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
         
-        // Update toggle button icons
-        const toggleBtn = document.querySelector('.theme-toggle');
+        // Update toggle button icons (now in navbar)
+        const toggleBtn = document.querySelector('.nav-theme-toggle');
         if (toggleBtn) {
             const sunIcon = toggleBtn.querySelector('.fa-sun-o');
             const moonIcon = toggleBtn.querySelector('.fa-moon-o');
@@ -45,8 +45,8 @@
     document.addEventListener('DOMContentLoaded', () => {
         initializeTheme();
         
-        // Add click event to theme toggle button
-        const toggleBtn = document.querySelector('.theme-toggle');
+        // Add click event to theme toggle button (now in navbar)
+        const toggleBtn = document.querySelector('.nav-theme-toggle');
         if (toggleBtn) {
             toggleBtn.addEventListener('click', toggleTheme);
         }
