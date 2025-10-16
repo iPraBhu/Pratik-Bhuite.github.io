@@ -35,9 +35,134 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fa fa-arrow-up"></i>
     </button>
+    
+    <!-- AI Assistant Variants (Desktop Only) - One will be randomly selected -->
+    
+    <!-- Variant 1: Neural Network Bot -->
+    <div class="ai-bot-container ai-variant-1" id="aiVariant1">
+        <div class="ai-neural-bot" id="aiBot1">
+            <div class="neural-core">
+                <div class="neural-display">
+                    <div class="neural-nodes">
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                        <div class="node"></div>
+                    </div>
+                    <div class="neural-connections">
+                        <div class="connection"></div>
+                        <div class="connection"></div>
+                        <div class="connection"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ai-tooltip neural-tooltip" id="aiTooltip1">
+            <div class="tooltip-content">
+                <div class="tooltip-header">
+                    <span class="ai-icon">�</span>
+                    <span class="ai-status">Neural AI</span>
+                </div>
+                <p id="aiBotMessage1">Analyzing Pratik's expertise...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Variant 2: Circuit Board Bot -->
+    <div class="ai-bot-container ai-variant-2" id="aiVariant2">
+        <div class="ai-circuit-bot" id="aiBot2">
+            <div class="circuit-board">
+                <div class="circuit-paths">
+                    <div class="path horizontal"></div>
+                    <div class="path vertical"></div>
+                    <div class="path diagonal"></div>
+                </div>
+                <div class="circuit-chips">
+                    <div class="chip main"></div>
+                    <div class="chip small"></div>
+                    <div class="chip small"></div>
+                </div>
+                <div class="circuit-leds">
+                    <div class="led"></div>
+                    <div class="led"></div>
+                    <div class="led"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ai-tooltip circuit-tooltip" id="aiTooltip2">
+            <div class="tooltip-content">
+                <div class="tooltip-header">
+                    <span class="ai-icon">⚡</span>
+                    <span class="ai-status">Circuit AI</span>
+                </div>
+                <p id="aiBotMessage2">Processing tech stack data...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Variant 3: Holographic AI -->
+    <div class="ai-bot-container ai-variant-3" id="aiVariant3">
+        <div class="ai-holo-bot" id="aiBot3">
+            <div class="holo-projector">
+                <div class="holo-base"></div>
+                <div class="holo-display">
+                    <div class="holo-grid">
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                    </div>
+                    <div class="holo-data">
+                        <div class="data-stream"></div>
+                        <div class="data-stream"></div>
+                        <div class="data-stream"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ai-tooltip holo-tooltip" id="aiTooltip3">
+            <div class="tooltip-content">
+                <div class="tooltip-header">
+                    <span class="ai-icon">�</span>
+                    <span class="ai-status">Holo AI</span>
+                </div>
+                <p id="aiBotMessage3">Projecting developer insights...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Variant 4: Quantum Computing AI -->
+    <div class="ai-bot-container ai-variant-4" id="aiVariant4">
+        <div class="ai-quantum-bot" id="aiBot4">
+            <div class="quantum-core">
+                <div class="quantum-rings">
+                    <div class="ring outer"></div>
+                    <div class="ring middle"></div>
+                    <div class="ring inner"></div>
+                </div>
+                <div class="quantum-center">
+                    <div class="qubit"></div>
+                    <div class="quantum-field">
+                        <div class="field-particle"></div>
+                        <div class="field-particle"></div>
+                        <div class="field-particle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ai-tooltip quantum-tooltip" id="aiTooltip4">
+            <div class="tooltip-content">
+                <div class="tooltip-header">
+                    <span class="ai-icon">⚛️</span>
+                    <span class="ai-status">Quantum AI</span>
+                </div>
+                <p id="aiBotMessage4">Quantum computing expertise data...</p>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="profile-page sidebar-collapse">
-            <nav class="navbar navbar-expand-lg fixed-top modern-nav" color-on-scroll="400">
+            <nav class="navbar navbar-expand-lg fixed-top modern-nav navbar-transparent" color-on-scroll="400">
                 <div class="container">
                     <div class="navbar-translate">
                         <a class="navbar-brand modern-brand" href="#" rel="tooltip">Pratik Bhuite</a>
@@ -867,6 +992,7 @@
         <script src="js/aos.js"></script>
         <script src="js/theme.js"></script>
         <script src="scripts/main.js"></script>
+        <script src="scripts/ai-variants.js"></script>
         <script type="text/javascript">
             $(function () {
                 // Initialize AOS with custom settings
