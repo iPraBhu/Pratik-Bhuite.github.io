@@ -18,7 +18,7 @@ $(document).ready(function() {
     
     // Add active class to clicked tab and corresponding content
     $(this).addClass('active');
-    $(target).addClass('active');
+    $('#' + target).addClass('active');
   });
 });
 
