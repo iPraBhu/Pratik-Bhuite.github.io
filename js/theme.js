@@ -13,8 +13,8 @@
         // Update toggle button icons (now in navbar)
         const toggleBtn = document.querySelector('.nav-theme-toggle');
         if (toggleBtn) {
-            const sunIcon = toggleBtn.querySelector('.fa-sun-o');
-            const moonIcon = toggleBtn.querySelector('.fa-moon-o');
+            const sunIcon = toggleBtn.querySelector('.fa-sun');
+            const moonIcon = toggleBtn.querySelector('.fa-moon');
             
             if (sunIcon && moonIcon) {
                 if (theme === 'dark') {

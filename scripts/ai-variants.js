@@ -1,12 +1,15 @@
 // AI Assistant Variants with Random Selection
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
   // Random AI Assistant Selection
-  const aiVariants = ['#aiVariant1', '#aiVariant2', '#aiVariant3', '#aiVariant4'];
+  const aiVariants = ['aiVariant1', 'aiVariant2', 'aiVariant3', 'aiVariant4'];
   const randomVariant = aiVariants[Math.floor(Math.random() * aiVariants.length)];
-  
+
   // Show randomly selected variant
-  $(randomVariant).addClass('ai-variant-active');
-  
+  const selectedVariant = document.getElementById(randomVariant);
+  if (selectedVariant) {
+    selectedVariant.classList.add('ai-variant-active');
+  }
+
   // AI Assistant Facts
   const pratikFacts = [
     "🚀 Pratik has 10+ years of full-stack development experience!",
@@ -25,59 +28,68 @@ $(document).ready(function() {
     "👥 Team leader who mentors junior developers!",
     "🎓 Continuous learner staying updated with latest tech trends!"
   ];
-  
+
   // Initialize the selected variant
   let currentFactIndex = 0;
   let aiMessageTimeout;
-  
+
   // Get the active variant elements
-  const activeBot = $(randomVariant + ' [id^="aiBot"]');
-  const activeTooltip = $(randomVariant + ' [id^="aiTooltip"]');
-  const activeMessage = $(randomVariant + ' [id^="aiBotMessage"]');
-  
+  const activeBot = selectedVariant ? selectedVariant.querySelector('[id^="aiBot"]') : null;
+  const activeTooltip = selectedVariant ? selectedVariant.querySelector('[id^="aiTooltip"]') : null;
+  const activeMessage = selectedVariant ? selectedVariant.querySelector('[id^="aiBotMessage"]') : null;
+
   // Show initial message after page load
   setTimeout(() => {
     showPratikFact();
   }, 3000);
-  
+
   // AI bot click handler for active variant
-  activeBot.on('click', function() {
-    currentFactIndex = (currentFactIndex + 1) % pratikFacts.length;
-    showPratikFact();
-    
-    // Add interaction effect based on variant
-    $(this).addClass('clicked');
-    setTimeout(() => {
-      $(this).removeClass('clicked');
-    }, 300);
-  });
-  
+  if (activeBot) {
+    activeBot.addEventListener('click', function() {
+      currentFactIndex = (currentFactIndex + 1) % pratikFacts.length;
+      showPratikFact();
+
+      // Add interaction effect based on variant
+      this.classList.add('clicked');
+      setTimeout(() => {
+        this.classList.remove('clicked');
+      }, 300);
+    });
+  }
+
   // Show random facts periodically
   setInterval(() => {
-    if (!activeTooltip.hasClass('show')) {
+    if (!activeTooltip || !activeTooltip.classList.contains('show')) {
       currentFactIndex = Math.floor(Math.random() * pratikFacts.length);
       showPratikFact();
     }
   }, 10000);
-  
+
   function showPratikFact() {
-    activeMessage.html(pratikFacts[currentFactIndex]);
-    activeTooltip.addClass('show');
-    
+    if (activeMessage) {
+      activeMessage.innerHTML = pratikFacts[currentFactIndex];
+    }
+    if (activeTooltip) {
+      activeTooltip.classList.add('show');
+    }
+
     clearTimeout(aiMessageTimeout);
     aiMessageTimeout = setTimeout(() => {
-      activeTooltip.removeClass('show');
+      if (activeTooltip) {
+        activeTooltip.classList.remove('show');
+      }
     }, 6000);
   }
-  
+
   // Hide tooltip when clicking elsewhere
-  $(document).on('click', function(e) {
-    const activeContainer = $(randomVariant);
-    if (!activeContainer.is(e.target) && activeContainer.has(e.target).length === 0) {
-      activeTooltip.removeClass('show');
+  document.addEventListener('click', function(e) {
+    if (selectedVariant && !selectedVariant.contains(e.target)) {
+      if (activeTooltip) {
+        activeTooltip.classList.remove('show');
+      }
     }
   });
-  
+
   // Debug: Log which variant was selected
   console.log('AI Assistant Variant Selected:', randomVariant);
 });
